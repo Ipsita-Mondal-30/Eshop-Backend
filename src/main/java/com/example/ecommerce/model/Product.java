@@ -69,4 +69,15 @@ public class Product {
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
+private String category; // This is the category for the product
+
+// Getter and Setter for category
+public String getCategory() {
+    return category;
 }
+
+public void setCategory(String category) {
+    this.category = category;
+}
+}
+

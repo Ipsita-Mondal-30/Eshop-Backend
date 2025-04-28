@@ -14,6 +14,7 @@ import java.util.List;
 @CrossOrigin(origins = "*")  // For React frontend
 public class ProductController {
     
+    
     private final ProductService productService;
     
     @Autowired
@@ -56,4 +57,10 @@ public class ProductController {
         List<Product> products = productService.searchProducts(keyword);
         return ResponseEntity.ok(products);
     }
+    @GetMapping("/category/{category}")
+public ResponseEntity<List<Product>> getProductsByCategory(@PathVariable String category) {
+    List<Product> products = productService.getProductsByCategory(category);
+    return ResponseEntity.ok(products);
+}
+
 }
